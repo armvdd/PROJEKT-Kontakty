@@ -15,3 +15,50 @@ Mobil   0 - 539px
 Tablet  540px - 959px (čti jako 540px a víc)
 PC      960px a víc
 */
+
+/* mobil */
+h1{
+	text-align: center;
+}
+.card{
+	border: #000000 solid 1px;
+	border-radius: 5px;
+	text-align: center;
+	margin-top: 10px;
+}
+.card img{
+	border-radius: 50%;
+	padding-top: 10px;
+}
+.card p{
+	padding: 0 20px;
+}
+
+@media screen and (min-width: 540px){
+	.kontejner{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.card{
+		flex: 0 0 calc((100% - 5px) / 2);
+		display: flex;
+	}
+	.card img{
+		flex: 0 0 20%;
+		padding: 10px 0 10px 10px;
+	}
+	.text{
+		flex: 1 1 80%;
+	}
+
+	@media screen and (min-width: 960px){
+		.kontejner{
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		.card{
+			display: block;
+			flex: 0 0 calc((100% - 20px) / 4);
+		}
+	}
